@@ -176,7 +176,7 @@ document.querySelector("#app").innerHTML = /* html */ `
                   px-4 py-2 md:p-0
                   md:flex md:items-center md:gap-7 text-[15px] font-medium text-ink-2">
         <a href="#que-hacemos" class="block py-3 md:py-0 hover:text-accent transition-colors">¿Qué hacemos?</a>
-        <a href="#trabajos" class="block py-3 md:py-0 hover:text-accent transition-colors">Cómo trabajamos</a>
+        <a href="#trabajos" class="block py-3 md:py-0 hover:text-accent transition-colors">Trabajos</a>
         <a href="#opiniones" class="block py-3 md:py-0 hover:text-accent transition-colors">Clientes</a>
         <a href="#ubicacion" class="block py-3 md:py-0 hover:text-accent transition-colors">Dónde estamos</a>
       </nav>
@@ -246,19 +246,10 @@ document.querySelector("#app").innerHTML = /* html */ `
 
       <div class="md:col-span-6 lg:col-span-7">
         <figure>
-          <div class="grid place-items-center w-full h-[240px] sm:h-[340px] lg:h-[420px]
-                      rounded-2xl border border-dashed border-line bg-panel px-6 text-center">
-            <div>
-              <svg class="w-10 h-10 mx-auto text-ink-3" viewBox="0 0 24 24" fill="none"
-                   stroke="currentColor" stroke-width="1.4" stroke-linecap="round"
-                   stroke-linejoin="round" aria-hidden="true">
-                <rect x="2.5" y="5" width="19" height="14" rx="2"/>
-                <circle cx="8.5" cy="10" r="1.8"/>
-                <path d="M2.5 16.5 8 11.5l4.5 4 3-2.5 6 5"/>
-              </svg>
-              <p class="mt-4 text-sm font-semibold text-ink">Foto del taller</p>
-            </div>
-          </div>
+          <img src="/assets/wrench-parts.jpg" width="360" height="640" loading="eager" decoding="async"
+               alt="Piezas de motor desarmadas sobre el banco de trabajo del taller"
+               class="w-full h-[240px] sm:h-[340px] lg:h-[420px] object-cover rounded-2xl bg-panel
+                      shadow-[0_18px_40px_-18px_rgba(138,90,31,0.45)]" />
         </figure>
       </div>
 
@@ -285,28 +276,52 @@ document.querySelector("#app").innerHTML = /* html */ `
     </div>
   </section>
 
-  <!-- ================= CÓMO TRABAJAMOS ================= -->
+  <!-- ================= TRABAJOS ================= -->
   <section id="trabajos" class="scroll-mt-16 mx-auto max-w-6xl px-4 sm:px-6 py-16 md:py-28">
 
-    <h2 class="display text-2xl md:text-3xl font-bold text-ink reveal">Cómo trabajamos</h2>
-    <p class="mt-3 text-[15px] leading-relaxed text-ink-2 max-w-[60ch] reveal">
-      Acá van fotos del taller en el día a día: el auto en el elevador, el
-      diagnóstico en la compu, el equipo trabajando. No es antes y después
-      como en un taller de chapa, pero sirve para que se vea cómo laburamos.
-    </p>
+    <h2 class="display text-2xl md:text-3xl font-bold text-ink reveal">Trabajos del taller</h2>
 
-    <div class="mt-10 md:mt-14 grid sm:grid-cols-2 gap-6 md:gap-8">
-      <div class="reveal grid place-items-center h-48 sm:h-64 rounded-xl
-                  border border-dashed border-line bg-panel text-center px-6">
-        <span class="ph text-ink-3">Foto a completar</span>
-      </div>
-      <div class="reveal grid place-items-center h-48 sm:h-64 rounded-xl
-                  border border-dashed border-line bg-panel text-center px-6"
-           style="transition-delay:70ms">
-        <span class="ph text-ink-3">Foto a completar</span>
-      </div>
+    <div class="mt-10 md:mt-14 grid md:grid-cols-2 gap-10 md:gap-12">
+
+      <!-- Trabajo 1: la pareja antes/después real que encontramos en su Instagram -->
+      <article class="reveal">
+        <div class="grid grid-cols-2 gap-1 rounded-xl overflow-hidden bg-line">
+          <div class="relative">
+            <span class="absolute top-2 left-2 z-10 px-2 py-0.5 rounded
+                         bg-ink text-white text-[10px] font-bold tracking-[0.1em]">ANTES</span>
+            <img src="/assets/motor-antes.jpg" width="295" height="174" loading="lazy" decoding="async"
+                 alt="Motor de un Ford con la correa de distribución y la bomba de agua originales, antes del cambio"
+                 class="w-full h-40 sm:h-56 object-cover bg-panel" />
+          </div>
+          <div class="relative">
+            <span class="absolute top-2 left-2 z-10 px-2 py-0.5 rounded
+                         bg-accent text-white text-[10px] font-bold tracking-[0.1em]">DESPUÉS</span>
+            <img src="/assets/motor-despues.jpg" width="295" height="130" loading="lazy" decoding="async"
+                 alt="El mismo motor Ford con la distribución y la bomba de agua ya cambiadas"
+                 class="w-full h-40 sm:h-56 object-cover bg-panel" />
+          </div>
+        </div>
+        <h3 class="mt-5 text-lg font-bold text-ink">Distribución y bomba de agua</h3>
+        <p class="mt-2 text-[15px] leading-relaxed text-ink-2">
+          Ford. Cambio completo de la correa de distribución y la bomba de
+          agua, el service que evita una rotura grande del motor más
+          adelante.
+        </p>
+      </article>
+
+      <!-- FOTO PLACEHOLDER: segundo trabajo, falta la pareja antes/después -->
+      <article class="reveal" style="transition-delay:70ms">
+        <div class="grid place-items-center h-40 sm:h-56 rounded-xl
+                    border border-dashed border-line bg-panel text-center px-6">
+          <span class="ph text-ink-3">Fotos a completar</span>
+        </div>
+        <h3 class="mt-5 text-lg font-bold text-ink-3">Nombre del trabajo</h3>
+        <p class="mt-2 text-[15px] leading-relaxed text-ink-3">
+          Acá va una descripción breve: qué se le hizo al auto y cómo quedó.
+        </p>
+      </article>
+
     </div>
-
   </section>
 
   <!-- ================= OPINIONES ================= -->
@@ -527,23 +542,18 @@ window.addEventListener("beforeunload", () => {
      Google les armó automáticamente a partir de reseñas de clientes, más
      lo que cuentan dos reseñas puntuales (la de Yasmin sobre distribución
      y frenos, la de Jesús sobre el presupuesto antes de reparar).
-
-   Por qué la sección de trabajos NO es antes y después:
-   En mecánica, salvo un golpe de chapa, el trabajo no se ve desde afuera:
-   un auto con la distribución cambiada se ve igual que antes. Mostrar un
-   "antes y después" inventado sería mentir. Revisé el Instagram del taller
-   buscando fotos reales del día a día y encontré casi todo contenido de
-   marketing con texto superpuesto, y un posteo marcado por la propia
-   Instagram como "Contenido de IA": ninguno de los dos sirve como foto real
-   del taller. Por eso la sección quedó como "Cómo trabajamos" con dos
-   lugares para fotos genuinas (el auto en el elevador, el diagnóstico en
-   la compu), no como pares de antes y después.
+   · Foto del hero (banco con piezas de motor) y el par antes/después de
+     "Trabajos" (distribución y bomba de agua de un Ford) son reales, de su
+     Instagram. La mayoría de las fotos de esa cuenta son gráficas de
+     marketing con texto superpuesto, inservibles tal cual; estas dos las
+     recorté para sacar el texto y dejar sólo la foto. Un posteo del feed
+     está marcado por la propia Instagram como "Contenido de IA": ese no se
+     usó para nada.
 
    Lo que hay que pedirle al taller si contesta:
 
-   1. FOTOS REALES. Una del local para el hero, y dos o tres del día a día
-      para "Cómo trabajamos": el auto en el elevador, alguien con el
-      scanner de diagnóstico, el equipo. Nada posado ni de stock.
+   1. SEGUNDO TRABAJO. Falta una segunda pareja de antes y después para
+      completar la sección.
    2. HORARIOS. Confirmar cuál de las tres versiones es la real.
    3. WHATSAPP. Confirmar si prefieren que los clientes escriban al
       2994123791 (el de Instagram) o al fijo de Google.
