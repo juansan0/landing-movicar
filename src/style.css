@@ -1,0 +1,118 @@
+@import "tailwindcss";
+
+/* --------------------------------------------------------------------
+   Tailwind v4: la config vive acá. Un acento (ámbar de herramienta),
+   un neutro cálido apenas sesgado hacia ese ámbar, y el verde sólo
+   para el botón de WhatsApp.
+-------------------------------------------------------------------- */
+@theme {
+  --font-sans: "Archivo", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+  --color-ink: #1a1712;        /* texto principal */
+  --color-ink-2: #55504a;      /* texto secundario */
+  --color-ink-3: #847d74;      /* notas, pies de foto */
+  --color-line: #e2ddd4;       /* filetes */
+  --color-panel: #f1efea;      /* fondo de sección clara */
+  --color-accent: #8a5a1f;
+  --color-accent-ink: #6e4718; /* hover del acento */
+  --color-accent-soft: #f6ead8;
+  --color-shell: #1c1812;      /* fondo oscuro */
+  --color-wa: #167d3e;         /* WhatsApp, y nada más */
+  --color-wa-ink: #11632f;
+}
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+    scrollbar-color: #c7bfae #f1efea;
+  }
+
+  html,
+  body {
+    overflow-x: hidden;
+    max-width: 100vw;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #fff;
+    color: var(--color-ink);
+    font-synthesis-weight: none;
+  }
+
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+
+  ::selection {
+    background: var(--color-accent);
+    color: #fff;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  /* Sobre fondo oscuro el anillo ámbar no se ve. */
+  .on-dark :focus-visible {
+    outline-color: #e3b876;
+  }
+}
+
+@layer components {
+  /* Archivo es variable: el ancho hace parte del trabajo en los títulos. */
+  .display {
+    font-stretch: 112%;
+    letter-spacing: -0.025em;
+  }
+
+  /* Dato que todavía no tenemos. Se ve, y se ve que es provisorio. */
+  .ph {
+    display: inline-block;
+    border: 1px dashed currentColor;
+    border-radius: 3px;
+    padding: 0.15em 0.5em;
+    font-size: 0.78em;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    opacity: 0.8;
+  }
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(8px);
+    transition:
+      opacity 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+      transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .reveal.active {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    transition-delay: 0ms !important;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+}

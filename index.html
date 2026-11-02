@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Taller Mecánico Movicar | Mecánica integral en Neuquén capital</title>
+    <meta
+      name="description"
+      content="Taller mecánico en San Martín 2109, Neuquén capital. Diagnóstico, frenos, suspensión y dirección, service y cambio de aceite. Pedí tu turno por WhatsApp."
+    />
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="theme-color" content="#8a5a1f" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_AR" />
+    <meta property="og:site_name" content="Movicar" />
+    <meta property="og:title" content="Taller Mecánico Movicar | Neuquén capital" />
+    <meta
+      property="og:description"
+      content="Taller mecánico en Neuquén capital. Pedí tu turno por WhatsApp y llevá el auto cuando te quede cómodo."
+    />
+    <!-- Sin og:image todavía: no tenemos una foto del taller que sea propia. -->
+
+    <!-- Datos estructurados. Sólo van las propiedades confirmadas.
+         Falta "url", hasta que haya dominio (ver DATOS A COMPLETAR en src/main.js).
+         Sin "openingHoursSpecification": las fuentes que encontré no coinciden
+         en el horario, hay que confirmarlo antes de publicarlo como dato fijo.
+         No va "aggregateRating": marcar como propio un puntaje tomado de Google
+         va contra las políticas de resultados enriquecidos. -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "AutoRepair",
+        "name": "Taller Mecánico Movicar",
+        "description": "Taller mecánico integral en Neuquén capital. Diagnóstico, frenos, suspensión y dirección, service y cambio de aceite.",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "San Martín 2109",
+          "addressLocality": "Neuquén",
+          "addressRegion": "Neuquén",
+          "postalCode": "Q8302",
+          "addressCountry": "AR"
+        },
+        "telephone": "+54-299-632-6744",
+        "sameAs": "https://www.instagram.com/tallerintegralmovicar",
+        "areaServed": { "@type": "City", "name": "Neuquén" }
+      }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..700&display=swap"
+    />
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
