@@ -246,10 +246,19 @@ document.querySelector("#app").innerHTML = /* html */ `
 
       <div class="md:col-span-6 lg:col-span-7">
         <figure>
-          <img src="/assets/wrench-parts.jpg" width="360" height="640" loading="eager" decoding="async"
-               alt="Piezas de motor desarmadas sobre el banco de trabajo del taller"
-               class="w-full h-[240px] sm:h-[340px] lg:h-[420px] object-cover rounded-2xl bg-panel
-                      shadow-[0_18px_40px_-18px_rgba(138,90,31,0.45)]" />
+          <div class="grid place-items-center w-full h-[240px] sm:h-[340px] lg:h-[420px]
+                      rounded-2xl border border-dashed border-line bg-panel px-6 text-center">
+            <div>
+              <svg class="w-10 h-10 mx-auto text-ink-3" viewBox="0 0 24 24" fill="none"
+                   stroke="currentColor" stroke-width="1.4" stroke-linecap="round"
+                   stroke-linejoin="round" aria-hidden="true">
+                <rect x="2.5" y="5" width="19" height="14" rx="2"/>
+                <circle cx="8.5" cy="10" r="1.8"/>
+                <path d="M2.5 16.5 8 11.5l4.5 4 3-2.5 6 5"/>
+              </svg>
+              <p class="mt-4 text-sm font-semibold text-ink">Foto del taller</p>
+            </div>
+          </div>
         </figure>
       </div>
 
@@ -283,29 +292,15 @@ document.querySelector("#app").innerHTML = /* html */ `
 
     <div class="mt-10 md:mt-14 grid md:grid-cols-2 gap-10 md:gap-12">
 
-      <!-- Trabajo 1: la pareja antes/después real que encontramos en su Instagram -->
+      <!-- FOTO PLACEHOLDER: sin pareja antes/después real todavía -->
       <article class="reveal">
-        <div class="grid grid-cols-2 gap-1 rounded-xl overflow-hidden bg-line">
-          <div class="relative">
-            <span class="absolute top-2 left-2 z-10 px-2 py-0.5 rounded
-                         bg-ink text-white text-[10px] font-bold tracking-[0.1em]">ANTES</span>
-            <img src="/assets/motor-antes.jpg" width="295" height="174" loading="lazy" decoding="async"
-                 alt="Motor de un Ford con la correa de distribución y la bomba de agua originales, antes del cambio"
-                 class="w-full h-40 sm:h-56 object-cover bg-panel" />
-          </div>
-          <div class="relative">
-            <span class="absolute top-2 left-2 z-10 px-2 py-0.5 rounded
-                         bg-accent text-white text-[10px] font-bold tracking-[0.1em]">DESPUÉS</span>
-            <img src="/assets/motor-despues.jpg" width="295" height="130" loading="lazy" decoding="async"
-                 alt="El mismo motor Ford con la distribución y la bomba de agua ya cambiadas"
-                 class="w-full h-40 sm:h-56 object-cover bg-panel" />
-          </div>
+        <div class="grid place-items-center h-40 sm:h-56 rounded-xl
+                    border border-dashed border-line bg-panel text-center px-6">
+          <span class="ph text-ink-3">Fotos a completar</span>
         </div>
-        <h3 class="mt-5 text-lg font-bold text-ink">Distribución y bomba de agua</h3>
-        <p class="mt-2 text-[15px] leading-relaxed text-ink-2">
-          Ford. Cambio completo de la correa de distribución y la bomba de
-          agua, el service que evita una rotura grande del motor más
-          adelante.
+        <h3 class="mt-5 text-lg font-bold text-ink-3">Nombre del trabajo</h3>
+        <p class="mt-2 text-[15px] leading-relaxed text-ink-3">
+          Acá va una descripción breve: qué se le hizo al auto y cómo quedó.
         </p>
       </article>
 
@@ -542,18 +537,15 @@ window.addEventListener("beforeunload", () => {
      Google les armó automáticamente a partir de reseñas de clientes, más
      lo que cuentan dos reseñas puntuales (la de Yasmin sobre distribución
      y frenos, la de Jesús sobre el presupuesto antes de reparar).
-   · Foto del hero (banco con piezas de motor) y el par antes/después de
-     "Trabajos" (distribución y bomba de agua de un Ford) son reales, de su
-     Instagram. La mayoría de las fotos de esa cuenta son gráficas de
-     marketing con texto superpuesto, inservibles tal cual; estas dos las
-     recorté para sacar el texto y dejar sólo la foto. Un posteo del feed
-     está marcado por la propia Instagram como "Contenido de IA": ese no se
-     usó para nada.
+   Sin fotos todavía: ni la del hero ni ningún par de "Trabajos". Encontré
+   un par antes/después real en su Instagram (distribución y bomba de agua
+   de un Ford) pero recortado de una gráfica de marketing, y no quedaba
+   bien en la página. Mejor esperar fotos sueltas, sin texto encima.
 
    Lo que hay que pedirle al taller si contesta:
 
-   1. SEGUNDO TRABAJO. Falta una segunda pareja de antes y después para
-      completar la sección.
+   1. FOTOS. Una del local para el hero, y pares de antes y después de
+      autos que hayan arreglado.
    2. HORARIOS. Confirmar cuál de las tres versiones es la real.
    3. WHATSAPP. Confirmar si prefieren que los clientes escriban al
       2994123791 (el de Instagram) o al fijo de Google.
